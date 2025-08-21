@@ -1,5 +1,6 @@
 import json
 from utils import process_data
+import pandas as pd
 
 
 def lambda_handler(event, context):
@@ -13,6 +14,9 @@ def lambda_handler(event, context):
 
     # Call function from utils.py
     processed_value = process_data(name)
+    df = pd.DataFrame({'fruits': ['apple', 'guava', 'pineapple'], 'vegetables': [
+                      'onion', 'spinach', 'bitter guard']})
+    print(df['fruits'])
 
     response = {
         "statusCode": 200,
