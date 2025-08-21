@@ -17,7 +17,7 @@ def lambda_handler(event, context):
     df = pd.DataFrame({'fruits': ['apple', 'guava', 'pineapple'], 'vegetables': [
                       'onion', 'spinach', 'bitter guard']})
     print(df['fruits'])
-    print('code got updated')
+    print('code is changed')
 
     response = {
         "statusCode": 200,
